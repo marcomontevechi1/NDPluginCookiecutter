@@ -1,0 +1,8 @@
+/bin/
+/dbd/
+/db/
+/lib/
+/include/
+O.*/
+envPaths
+.vscode

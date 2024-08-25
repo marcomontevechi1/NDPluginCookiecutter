@@ -1,0 +1,6 @@
+{
+  "project_name": "MyPlugin",
+  "project_slug": "NDPlugin{{ cookiecutter.project_name.replace(' ', '') }}",
+  "project_repo_url": "None",
+  "author": "A Bunch Of People"
+}

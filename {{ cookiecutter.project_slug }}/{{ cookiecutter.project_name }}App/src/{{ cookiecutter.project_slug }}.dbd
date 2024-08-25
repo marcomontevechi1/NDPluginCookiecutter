@@ -1,0 +1,1 @@
+registrar(ND{{ cookiecutter.project_name }}Register)
