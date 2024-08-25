@@ -1,8 +1,8 @@
 
 include "NDPluginBase.template"
 
-record(ai, "$(P)$(R)MyRecord"){
+record(ao, "$(P)$(R)MyRecord"){
     field(DESC, "Very Record, much wow")
     field(DTYP, "asynInt32")
-    field(OUT , "@asyn($(PORT),$(ADDR),$(TIMEOUT))MY_RECORD")
+    field(OUT , "@asyn($(PORT),$(ADDR),$(TIMEOUT))MY_PARAM")
 }
