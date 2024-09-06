@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Exit immediately if a command exits with a non-zero status
+set -e
+
+echo " "
+echo "-----------------------------------------------------------------------------------"
+echo "- step 1: make -f Makefile.E3 PRJ=readhostip LIBVERSION=0.0.1 clean uninstall build -"
+#############################################################################
+if ! (make -f {{ cookiecutter.project_name }}.Makefile PRJ={{ cookiecutter.project_slug.lower() }} LIBVERSION=0.0.1 clean uninstall build); then
+    echo "make failed..."
+    exit 1
+fi
+
+echo " "
+echo "-------------------------------------------------------------------------"
+echo "- step 2: make -f Makefile.E3 PRJ=readhostip LIBVERSION=0.0.1 db_internal -"
+#############################################################################
+if ! (make -f {{ cookiecutter.project_name }}.Makefile PRJ={{ cookiecutter.project_slug.lower() }} LIBVERSION=0.0.1 db_internal); then
+    echo "make db_internal failed..."
+    exit 1
+fi
+
+echo " "
+echo "---------------------------------------------------------------------"
+echo "- step 3: make -f Makefile.E3 PRJ=readhostip LIBVERSION=0.0.1 install -"
+#############################################################################
+if ! (make -f {{ cookiecutter.project_name }}.Makefile PRJ={{ cookiecutter.project_slug.lower() }} LIBVERSION=0.0.1 install); then
+    echo "make install failed..."
+    exit 1
+fi

@@ -2,5 +2,9 @@
   "project_name": "MyPlugin",
   "project_slug": "NDPlugin{{ cookiecutter.project_name.replace(' ', '') }}",
   "project_repo_url": "None",
-  "author": "A Bunch Of People"
+  "company": "Your Company",
+  "author": "A Bunch Of People",
+  "email": "youremail@domain.a.b.c",
+  "keep_E3_Makefile": ["N", "Y"],
+  "keep_bash_build_script": ["N", "Y"]
 }
