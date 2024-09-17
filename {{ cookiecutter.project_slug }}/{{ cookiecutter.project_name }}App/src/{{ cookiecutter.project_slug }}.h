@@ -1,7 +1,7 @@
 {% if cookiecutter.author != "None" %}
 /*{{ cookiecutter.project_slug.upper() }}_H
  *
- * Authors: Marco A. B Montevechi Filho, Henrique F. Simoes, Eduardo X. S. Miqueles
+ * Authors: {{ cookiecutter.author }}
  *
  */
 {% endif %}
